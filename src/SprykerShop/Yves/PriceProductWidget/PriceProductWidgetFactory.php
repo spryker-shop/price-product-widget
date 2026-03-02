@@ -12,9 +12,6 @@ use SprykerShop\Yves\PriceProductWidget\Dependency\Client\PriceProductWidgetToPr
 
 class PriceProductWidgetFactory extends AbstractFactory
 {
-    /**
-     * @return \SprykerShop\Yves\PriceProductWidget\Dependency\Client\PriceProductWidgetToPriceProductStorageClientInterface
-     */
     public function getPriceProductStorageClient(): PriceProductWidgetToPriceProductStorageClientInterface
     {
         return $this->getProvidedDependency(PriceProductWidgetDependencyProvider::CLIENT_PRICE_PRODUCT_STORAGE);

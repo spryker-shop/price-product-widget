@@ -22,9 +22,6 @@ class PriceProductWidget extends AbstractWidget
      */
     protected const PARAMETER_CURRENT_PRODUCT_PRICE = 'currentProductPrice';
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductViewTransfer $productViewTransfer
-     */
     public function __construct(ProductViewTransfer $productViewTransfer)
     {
         if (!$productViewTransfer->getQuantity()) {
@@ -58,11 +55,6 @@ class PriceProductWidget extends AbstractWidget
         return '@PriceProductWidget/views/price/price.twig';
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductViewTransfer $productViewTransfer
-     *
-     * @return void
-     */
     protected function addPriceParameter(ProductViewTransfer $productViewTransfer): void
     {
         $priceProductFilterTransfer = (new PriceProductFilterTransfer())
